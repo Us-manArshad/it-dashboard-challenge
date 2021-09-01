@@ -24,3 +24,34 @@ This is a repository for IT-Challenge developed with Python, [rpaframework](http
 5. Run the assistant you had created above
 6. Bot will start performing the task as mentioned above
 7. Your output data will be saved in output folder. click on output when task finished.
+
+
+## File Structure
+### [constants.py](https://github.com/Us-manArshad/it-dashboard-challenge/blob/master/constants.py)
+
+Keyword | Description
+| :--- | :---
+URL  | *URL of the it-dashboard website*
+DOWNLOAD_DIR  | *Download directory name*
+AGENCY_EXCEL_NAME  | *Excel file name for agencies*
+INVESTMENT_EXCEL_NAME  | *Excel file name for investment table data.*
+KEYWORD  | *Button name to click on home page so agencies can be visible*
+OPEN_AGENCY  | *Number for which agency you wan to scrap the agency investment table, and download the PDF's*
+
+### [task.py](https://github.com/Us-manArshad/it-dashboard-challenge/blob/master/task.py)
+It will initialize the [it_dashboard.py](https://github.com/Us-manArshad/it-dashboard-challenge/blob/master/it_dashboard.py) object and call the 
+required functions to perform the challenge.
+
+### [it_dashboard.py](https://github.com/Us-manArshad/it-dashboard-challenge/blob/master/it_dashboard.py)
+- Have the logic to scrap and create the Excel file for agencies and Investment table,
+- Get the uii links and download the PDF's associated with it.
+- Read PDF's and compare with "Name of this Investment" with the column "Investment Title", and the value "Unique Investment Identifier (UII)" with the column "UII".
+
+### [conda.yaml](https://github.com/Us-manArshad/it-dashboard-challenge/blob/master/conda.yaml)
+Having configuration to set up the environment and [rpaframework](https://rpaframework.org/releasenotes.html) dependencies.
+
+### [robot.yaml](https://github.com/Us-manArshad/it-dashboard-challenge/blob/master/conda.yaml)
+Having configuration for robocorp to run the [conda.yaml](https://github.com/Us-manArshad/it-dashboard-challenge/blob/master/conda.yaml) and execute the task.py
+
+
+You can find more details and a full explanation of the code on [Robocorp documentation](https://robocorp.com/docs/development-guide/browser/rpa-form-challenge)
