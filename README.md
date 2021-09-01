@@ -39,7 +39,7 @@ KEYWORD  | *Button name to click on home page so agencies can be visible*
 OPEN_AGENCY  | *Number for which agency you wan to scrap the agency investment table, and download the PDF's*
 
 ### [task.py](https://github.com/Us-manArshad/it-dashboard-challenge/blob/master/task.py)
-It will initialize the [it_dashboard.py](https://github.com/Us-manArshad/it-dashboard-challenge/blob/master/it_dashboard.py) object and call the 
+It will initialize the ITDashboard from [it_dashboard.py](https://github.com/Us-manArshad/it-dashboard-challenge/blob/master/it_dashboard.py) instance and call the 
 required functions to perform the challenge.
 
 ### [it_dashboard.py](https://github.com/Us-manArshad/it-dashboard-challenge/blob/master/it_dashboard.py)
