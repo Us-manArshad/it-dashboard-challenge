@@ -106,9 +106,8 @@ class ITDashboard:
             '//div[@id="agency-tiles-widget"]//div[@class="col-sm-4 text-center noUnderline"]//div[@class="row top-gutter-20"]//div[@class="col-sm-12"]')[
             agency_number].click()
         self.get_table_header()
-        investment_table_data = {}
         for head in self.headers:
-            investment_table_data[head] = []
+            self.investment_table_data[head] = []
         while True:
             current_label = self.browser.find_element("investments-table-object_info").text
             all_rows = self.browser.find_element("investments-table-object").find_element_by_tag_name(
@@ -116,9 +115,9 @@ class ITDashboard:
             for row in all_rows:
                 for i, data in enumerate(row.find_elements_by_tag_name("td")):
                     try:
-                        investment_table_data[self.headers[i]].append(data.text)
+                        self.investment_table_data[self.headers[i]].append(data.text)
                     except:
-                        investment_table_data[self.headers[i]].append("")
+                        self.investment_table_data[self.headers[i]].append("")
             self.get_uii_links()
             if self.browser.find_element('investments-table-object_next').get_attribute(
                     "class") == 'paginate_button next disabled':
